@@ -68,7 +68,7 @@
         </div>
         <div class="sidebar-list">
         <ul class="sidebar-list-body sidebar-list-items">
-        <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=F Y')
+        <?php $this->widget('Widget_Contents_Post_Date', 'type=month&format=Y/m')
             ->parse('<li class="sidebar-list-item"><a href="{permalink}">{date}  ({count})</a></li>'); ?>
         </ul>
         </div>

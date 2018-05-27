@@ -6,8 +6,12 @@
             <a href="https://github.com/spiritree/typecho-theme-amaze" target="_blank">
             <span class="am-icon-btn am-icon-md am-icon-github footer-icon"></span>
         </li>
+	    <li>
+            <a href="https://github.com/Whuihuan/typecho-theme-amaze" target="_blank">
+            <span class="am-icon-btn am-icon-md am-icon-github footer-icon"></span>
+        </li>
     </ul>
-    <div class="blog-text-center">© <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> 由 <a href="http://www.typecho.org" target="_blank">Typecho</a> 强力驱动 Theme is <a href="https://spiritree.me" target="_blank">Amaze made by Spiritree</a>
+    <div class="blog-text-center">© <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a> 由 <a href="http://www.typecho.org" target="_blank">Typecho</a> 强力驱动<br>Theme is <a href="https://spiritree.me" target="_blank">Amaze made by Spiritree.</a> Modify by 涂山萃萃<?php if ($this->options->ICPText): ?><br><a href="http://www.miibeian.gov.cn" target="_blank"><?php $this->options->ICPText(); ?></a><?php endif; ?>
     </div>
 </footer>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>

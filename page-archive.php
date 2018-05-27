@@ -24,9 +24,9 @@ $this->need('header.php');
         if ($year != $year_tmp || $mon != $mon_tmp) {
 			 $year = $year_tmp;
 			 $mon = $mon_tmp;
-			 $output .= '<div class="categorys-title">'.date('M Y',$archives->created).'</div><div class="post-lists"><div class="post-lists-body">';
+			 $output .= '<div class="categorys-title">'.date('Y/m',$archives->created).'</div><div class="post-lists"><div class="post-lists-body">';
         }
-        $output .= '<div class="post-list-item"><div class="post-list-item-container"><div class="item-label"><div class="item-title"><a href="'.$archives->permalink .'">'. $archives->title .'</a></div><div class="item-meta clearfix"><div class="item-meta-date"> '.date('M j, Y',$archives->created).' </div></div></div></div></div>';
+        $output .= '<div class="post-list-item"><div class="post-list-item-container"><div class="item-label"><div class="item-title"><a href="'.$archives->permalink .'">'. $archives->title .'</a></div><div class="item-meta clearfix"><div class="item-meta-date"> '.date('Y/m/d',$archives->created).' </div></div></div></div></div>';
     }
     $output .= '</div></div></div>';
     echo $output;

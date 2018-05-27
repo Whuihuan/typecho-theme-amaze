@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/amazeui.min.css'); ?>">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/customui.min.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('css/extra.css'); ?>">
     <!-- CodeHighlight -->
     <style>
     .hljs{display:block;overflow-x:auto;padding:0.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#a0a1a7;}.hljs-doctag,.hljs-keyword,.hljs-formula{color:#a626a4}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e45649}.hljs-literal{color:#0184bb}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#50a14f}.hljs-built_in,.hljs-class .hljs-title{color:#c18401}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#986801}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#4078f2}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline}
@@ -67,7 +68,10 @@
                     <li>
                         <a class="am-icon-search navbar-search" href="<?php $this->options->searchPage(); ?>"></a>
                     </li>
-                    <?php endif;?>
+                    <?php endif; ?>
+                    <?php if($this->user->hasLogin()): ?>
+                    <li><a href="<?php $this->options->adminUrl(); ?>">进入后台(<?php $this->user->screenName(); ?>)</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -75,7 +79,7 @@
     </div>
     <!-- /.container -->
 </nav>
-<header class="intro-header" style="background-image: url('<?php $this->options->backgroundImage(); ?>')">
+<header class="intro-header" style="background-image: url('<?php $this->options->backgroundImage(); ?>');<?php $this->options->backgroundStyle(); ?>">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

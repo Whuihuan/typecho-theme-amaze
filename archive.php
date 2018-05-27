@@ -25,22 +25,23 @@ $this->need('header.php');
                             </div>
                             <div class="author-lockup blog-flex1">
                                 <a class="link" href="<?php $this->author->permalink(); ?>"><?php $this->author(); ?></a>
-                                <span class="in">in</span>
+                                <span class="in">写在</span>
                                 <span class="category-name">
                                     <?php $this->category('  '); ?>
                                 </span>
                             </div>
                         </div>
                     </div>
-                <span class="pull-right time pc_time"><?php $this->date('F j, Y'); ?></span>
+                <span class="pull-right time pc_time"><?php $this->date('Y/m/d'); ?></span>
                 </div>
             <h1 class="post-index-title"><a target="_blank" itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h1>
             <div class="post-content-preview">
-                <?php $this->excerpt(200, '...'); ?>
+                <?php $this->excerpt(100, '...'); ?>
             </div>
             <div class="clearfix topic-footer">
-                <span class="pull-left time mobile_time"><?php $this->date('F j, Y'); ?></span>
+                <span class="pull-left time mobile_time"><?php $this->date('Y/m/d'); ?></span>
             </div>
+            <span class="pull-right" style="font-size:16px;line-height:36px;"><a itemtype="url" href="<?php $this->permalink() ?>">阅读全文</a></span>
         </article>
         <?php endwhile; ?>
         <?php else: ?>

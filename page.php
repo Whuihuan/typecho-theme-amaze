@@ -5,7 +5,8 @@
     <div class="am-u-sm-12">
         <article class="am-article blog-article-p">
             <div class="am-article-hd">
-                <h1 class="am-article-title blog-text-center"><?php $this->title() ?></h1>
+                <h1 class="am-article-title blog-text-center" style="font-size: 30px;"><?php $this->title() ?></h1>
+                <div class="header_line"></div>
             </div>
             <div class="am-article-bd">
                 <?php $this->content(); ?>

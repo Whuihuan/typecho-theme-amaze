@@ -8,6 +8,9 @@ function themeConfig($form) {
     $backgroundImage = new Typecho_Widget_Helper_Form_Element_Text('backgroundImage', NULL, NULL, _t('背景图片地址'), _t('请输入背景图片地址'));
     $form->addInput($backgroundImage);
 
+    $backgroundStyle = new Typecho_Widget_Helper_Form_Element_Text('backgroundStyle', NULL, NULL, _t('背景样式代码'), _t('请输入背景样式代码'));
+    $form->addInput($backgroundStyle);
+    
     $backgroundText = new Typecho_Widget_Helper_Form_Element_Text('backgroundText', NULL, NULL, _t('背景图片大标题'), _t('请输入背景图片大标题内容'));
     $form->addInput($backgroundText);
 
@@ -31,6 +34,9 @@ function themeConfig($form) {
 
     $socialWeibo = new Typecho_Widget_Helper_Form_Element_Text('socialWeibo', NULL, NULL, _t('Weibo'), _t('请输入微博地址'));
     $form->addInput($socialWeibo);
+    
+    $ICPText = new Typecho_Widget_Helper_Form_Element_Text('ICPText', NULL, NULL, _t('ICP备案号'), _t('请输入ICP备案号'));
+    $form->addInput($ICPText);
 }
 
 function getCommentAt($coid){

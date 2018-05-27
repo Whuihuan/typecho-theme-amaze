@@ -62,7 +62,10 @@
                     <li>
                         <a class="am-icon-search navbar-search" href="<?php $this->options->searchPage(); ?>"></a>
                     </li>
-                    <?php endif;?>
+                    <?php endif; ?>
+                    <?php if($this->user->hasLogin()): ?>
+                    <li><a href="<?php $this->options->adminUrl(); ?>">进入后台(<?php $this->user->screenName(); ?>)</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </div>
@@ -71,14 +74,14 @@
     <!-- /.container -->
 </nav>
 
-    <header class="intro-header" style="background-image: url('<?php $this->options->backgroundImage();?>')">
+    <header class="intro-header" style="background-image: url('<?php $this->options->backgroundImage();?>');<?php $this->options->backgroundStyle(); ?>">
     <div class="container">
         <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading">
                         <h1><?php $this->title() ?></h1>
-                        <span class="meta">@<?php $this->author(); ?> &nbsp;<?php $this->date('F j, Y'); ?></span>
-                        <div class="tags post-tags"><?php $this->category('  '); ?>&nbsp;</div>
+                        <span class="meta">@<?php $this->author(); ?> &nbsp;<?php $this->date('Y/m/d'); ?></span>
+                        <div class="tags post-tags">分类：<?php $this->category('  '); ?>&nbsp;<?php if($this->tags): ?> 标签：<?php $this->tags('', true, 'none'); ?><?php endif; ?><?php if($this->user->pass('administrator',true) || $this->user->pass('editor',true)): ?><br>管理员操作：<a href="/admin/write-post.php?cid=<?php echo $this->cid;?>">编辑</a><?php endif; ?></div>
                     </div>
                 </div>
         </div>
