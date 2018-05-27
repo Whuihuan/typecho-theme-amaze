@@ -3,3 +3,26 @@
     border-top: 1px solid #ddd;
     text-align: center;
 }
+.back-to-top:before {
+  display: block;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-width: 0 7px 14px 7px;
+  border-color: transparent transparent #fff transparent;
+  border-style: solid;
+}
+.back-to-top {
+  position: fixed;
+  bottom: 19px;
+  right: 1rem;
+  bottom: 3rem;
+  z-index: 1050;
+  padding: 10px;
+  color: #49ba34;
+  background: #49ba34;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+  border: 2px solid;
+  border-radius: 25px;
+}
