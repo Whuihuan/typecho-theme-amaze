@@ -26,3 +26,12 @@
   border: 2px solid;
   border-radius: 25px;
 }
+.image-caption
+{
+  margin: 10px auto 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  font-weight: bold;
+  line-height: 1;
+}

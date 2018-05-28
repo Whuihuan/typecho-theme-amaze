@@ -17,6 +17,7 @@
 <div style="display:none;" class="back-to-top" id="back-to-top"></div>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="<?php $this->options->themeUrl('fancybox/jquery.fancybox.min.js');?>"></script>
 <script>
     var $body=document.body;var $toggle=document.querySelector(".navbar-toggle");var $navbar=document.querySelector("#huxblog_navbar");var $collapse=document.querySelector(".navbar-collapse");var __HuxNav__={close:function(){$navbar.className=" ";setTimeout(function(){if($navbar.className.indexOf("in")<0){$collapse.style.height="0px"}},400)},open:function(){$collapse.style.height="auto";$navbar.className+=" in"}};$toggle.addEventListener("click",function(a){if($navbar.className.indexOf("in")>0){__HuxNav__.close()}else{__HuxNav__.open()}});document.addEventListener("click",function(a){if(a.target==$toggle){return}if(a.target.className=="icon-bar"){return}__HuxNav__.close()});jQuery(document).ready(function(c){var d=1170;if(c(window).width()>d){var b=c(".navbar-custom").height(),a=c(".intro-header .container").height();c(window).on("scroll",{previousTop:0},function(){var e=c(window).scrollTop(),f=c(".side-catalog");if(e<this.previousTop){if(e>0&&c(".navbar-custom").hasClass("is-fixed")){c(".navbar-custom").addClass("is-visible")}else{c(".navbar-custom").removeClass("is-visible is-fixed")}}else{c(".navbar-custom").removeClass("is-visible");if(e>b&&!c(".navbar-custom").hasClass("is-fixed")){c(".navbar-custom").addClass("is-fixed")}}this.previousTop=e;f.show();if(e>(a+41)){f.addClass("fixed")}else{f.removeClass("fixed")}})}});
 </script>
@@ -45,6 +46,39 @@
       });
     });
   });
+</script>
+<script>
+$(document).ready(function() {
+  $('#post-content img').not('.group-picture img').each(function ()
+  {
+    var $image = $(this);
+    var imageTitle = $image.attr('title');
+    var $imageWrapLink = $image.parent('a');
+    $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
+    $imageWrapLink.attr('data-caption',imageTitle);
+    $imageWrapLink.attr('data-fancybox', 'imggroup');
+    $imageWrapLink.attr('data-type', 'image');
+    if (imageTitle)
+    {
+      $imageWrapLink.append('<p class="image-caption">' + imageTitle + '</p>');
+      $imageWrapLink.attr("title", imageTitle); //make sure img title tag will show correctly in fancybox
+    }
+  });
+  $('[data-fancybox="imggroup"]').fancybox({
+    protect:true,
+    autoScale:true,
+    animationEffect: "zoom",
+    keyboard: true,
+    arrows: true,
+    infobar: true,
+    transitionEffect: "slide",
+    thumbs:
+    {
+      hideOnClose: false
+    }
+  });
+});
+
 </script>
 <?php $this->footer(); ?>
 </body>
