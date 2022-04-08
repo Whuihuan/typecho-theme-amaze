@@ -13,7 +13,9 @@
             </div>
         </article>
 
-        <?php $this->need('comments.php'); ?>
+        <?php if ($this->options->DisplayComment == '1' && $this->options->ICPMode == '0'): ?>
+            <?php $this->need('comments.php'); ?>
+        <?php endif; ?>
 
         <hr>
     </div>

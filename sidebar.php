@@ -19,17 +19,17 @@
             <?php endif; ?>
             <?php if ($this->options->socialGithub): ?>
             <li>
-                <a class="am-icon-btn am-icon-github" target="_blank" itemtype="url" href="<?php $this->options->socialGithub(); ?>"></a>
+                <a class="am-icon-btn am-icon-github" target="_blank" itemtype="url" href="https://github.com/<?php $this->options->socialGithub(); ?>"></a>
             </li>
             <?php endif; ?>
             <?php if ($this->options->socialWeibo): ?>
             <li>
-                <a class="am-icon-btn am-icon-weibo" target="_blank" itemtype="url" href="<?php $this->options->socialWeibo(); ?>"></a>
+                <a class="am-icon-btn am-icon-weibo" target="_blank" itemtype="url" href="https://weibo.com/<?php $this->options->socialWeibo(); ?>"></a>
             </li>
             <?php endif; ?>
             <?php if ($this->options->socialTwitter): ?>
             <li>
-                <a class="am-icon-btn am-icon-twitter" target="_blank" itemtype="url" href="<?php $this->options->socialTwitter(); ?>"></a>
+                <a class="am-icon-btn am-icon-twitter" target="_blank" itemtype="url" href="https://twitter.com/<?php $this->options->socialTwitter(); ?>"></a>
             </li>
             <?php endif; ?>
         </ul>
@@ -73,4 +73,18 @@
         </ul>
         </div>
     </section>
+    <?php if (class_exists("Links_Plugin")): ?>
+    <section>
+        <div class="sidebar-header">
+            <span class="sidebar-header-title">
+                友情链接
+            </span>
+        </div>
+        <div class="sidebar-list">
+          <ul class="sidebar-list-body sidebar-list-items">
+            <?php Links_Plugin::output("<li class='sidebar-list-item'><a href='{url}' title='{title}' target='_blank'>{name}</a></li>",5,"yes"); ?>
+          </ul>
+        </div>
+    </section>
+    <?php endif; ?>
 </div>
