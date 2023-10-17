@@ -87,4 +87,18 @@
         </div>
     </section>
     <?php endif; ?>
+    <?php if (class_exists("TeConnect_Plugin") && !$this->user->hasLogin()): ?>
+    <section>
+        <div class="sidebar-header">
+            <span class="sidebar-header-title">
+                社会化登录
+            </span>
+        </div>
+        <div class="sidebar-list">
+          <ul class="sidebar-list-body sidebar-list-items">
+            <li class="sidebar-list-item"><?php TeConnect_Plugin::show() ?></li>
+          </ul>
+        </div>
+    </section>
+    <?php endif; ?>
 </div>
