@@ -4,8 +4,6 @@
 
 <head>
     <meta charset="<?php $this->options->charset(); ?>">
-    <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <link rel="dns-prefetch" href="https://cdn.bootcss.com" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title><?php $this->archiveTitle(array(
@@ -104,7 +102,7 @@
         }
     </style>
     <!-- FontAwesome -->
-    <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
 
@@ -211,7 +209,7 @@
     </div>
     <!-- content end -->
     <?php $this->need('footer.php'); ?>
-    <script src="https://cdn.bootcss.com/headroom/0.9.4/headroom.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/headroom.js@0.9.4/dist/headroom.min.js"></script>
     <script>
         var postDirectoryBuild = function() {
             var b = function a(l, h) {
