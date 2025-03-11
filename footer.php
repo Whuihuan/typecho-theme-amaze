@@ -22,8 +22,8 @@
     <div><span id="yiyan">　</span><span class="typed-cursor">|</div>
   </div>
 </footer>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/highlight.js@9.12.0/lib/highlight.min.js"></script>
 <script type="text/javascript" src="<?php $this->options->themeUrl('fancybox/jquery.fancybox.min.js'); ?>"></script>
 <script>
   $({
