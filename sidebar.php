@@ -73,7 +73,7 @@
         </ul>
         </div>
     </section>
-    <?php if (class_exists("Links_Plugin")): ?>
+    <?php if (class_exists("Links_Plugin") && isset($this->options->plugins['activated']['Links'])): ?>
     <section>
         <div class="sidebar-header">
             <span class="sidebar-header-title">
