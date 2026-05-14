@@ -39,10 +39,9 @@ $this->need('header.php');
                         <div class="pull-left">
                             <div class="blog-flex-center">
                                 <div class="blog-flex0">
-                                    <!-- <?php var_dump($this->options->plugins) ?> -->
                                     <?php if ($this->options->avatarUrl) { ?>
                                         <img src="<?php $this->options->avatarUrl(); ?>" alt="<?php $this->author(); ?>" class="link avatar avatar-image" />
-                                    <?php } else if (class_exists("QQSupport_Plugin") && isset($this->options->plugins['activated']['QQSupport'])) { ?>
+                                    <?php } else if (class_exists("QQSupport_Plugin") && isset($this->options->plugins['activated']['QQSupport']) && QQSupport_Plugin::getQQ($this->author->uid) != "") { ?>
                                         <img src="<?php QQSupport_Plugin::getQQAvatar($this->author->uid); ?>" alt="<?php $this->author(); ?>" class="link avatar avatar-image" />
                                     <?php } else { ?>
                                         <?php $this->author->gravatar(36, "G", "", "link avatar avatar-image"); ?>
